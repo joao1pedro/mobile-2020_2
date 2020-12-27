@@ -5,14 +5,7 @@ import IMCCalc from './IMCCalc'
 export default class IMCApp extends Component {
     constructor(props) {
         super(props)
-        this.state = { peso: null, altura: null}
-
-        this.acaoBotao = this.acaoBotao.bind(this);
-    }
-
-    acaoBotao = () => {
-        console.log(this.state.altura)
-        console.log(this.state.peso)
+        this.state = { peso: null, altura: null, p: null, h:null}
     }
 
     render() {
@@ -31,13 +24,19 @@ export default class IMCApp extends Component {
                         placeholder='Digite o peso'
                         onChangeText={(peso) => this.setState({ peso })}
                     />
-                    <IMCCalc peso={this.state.peso} altura={this.state.altura} />
+                    
                     <View style={styles.viewButton}>
                         <Button
                             title="Calcular"
-                            onPress={this.acaoBotao}
+                            onPress={
+                                (p,h) => {
+                                    this.setState( {p:this.state.peso} )
+                                    this.setState( {h:this.state.altura} )
+                                }
+                            }
                         />
                     </View>
+                    <IMCCalc peso={this.state.p} altura={this.state.h} />
                 </View>
             </View>
         )

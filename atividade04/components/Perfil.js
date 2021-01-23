@@ -21,8 +21,8 @@ export default class Perfil extends Component {
                     Email: {email}
                 </Text>
                 <Button
-                    onPress={() => this.props.navigation.goBack()}
-                    title="Sair do Modal"
+                    title="Home"
+                    onPress={() => this.props.navigation.navigate('Home')}
                 />
             </View>
         );

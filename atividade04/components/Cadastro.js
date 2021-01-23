@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { View, TextInput, Button, StyleSheet } from 'react-native'
-import Perfil from './Perfil'
 
 export default class Cadastro extends Component {
     constructor(props) {

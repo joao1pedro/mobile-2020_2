@@ -12,7 +12,7 @@ export default class Home extends Component {
                 />
                 <Button
                     title="IMC"
-                    onPress={() => this.props.navigation.navigate('About')}
+                    onPress={() => this.props.navigation.navigate('IMC')}
                 />
                 <Button
                     title="Sobre"

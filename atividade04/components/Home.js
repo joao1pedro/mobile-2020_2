@@ -5,7 +5,7 @@ export default class Home extends Component {
     render() {
         return (
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <Text>Home ;D</Text>
+                <Text style={{ fontSize: 20, padding: 10, fontWeight: "bold" }}>Atividade 04</Text>
                 <Button
                     title="Cadastro"
                     onPress={() => this.props.navigation.navigate('Cadastro')}

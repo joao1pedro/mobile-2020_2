@@ -17,11 +17,51 @@ function StackMainScreens() {
         <StackMain.Navigator
             initialRouteName='Home'
         >
-            <StackMain.Screen name='Home' component={Home} />
-            <StackMain.Screen name='Cadastro' component={Cadastro} />
-            <StackMain.Screen name='IMC' component={IMC} />
-            <StackMain.Screen name='Sobre' component={Sobre} />
-            <StackMain.Screen name='Resultado' component={Resultado} />
+            <StackMain.Screen name='Home' component={Home} options={{
+                headerStyle: {
+                    backgroundColor: '#009387',
+                },
+                headerTintColor: '#fff',
+                headerTitleStyle: {
+                    fontWeight: 'bold',
+                },
+            }}/>
+            <StackMain.Screen name='Cadastro' component={Cadastro} options={{
+                headerStyle: {
+                    backgroundColor: '#009387',
+                },
+                headerTintColor: '#fff',
+                headerTitleStyle: {
+                    fontWeight: 'bold',
+                },
+            }}/>
+            <StackMain.Screen name='IMC' component={IMC} options={{
+                headerStyle: {
+                    backgroundColor: '#009387',
+                },
+                headerTintColor: '#fff',
+                headerTitleStyle: {
+                    fontWeight: 'bold',
+                },
+            }}/>
+            <StackMain.Screen name='Sobre' component={Sobre} options={{
+                headerStyle: {
+                    backgroundColor: '#009387',
+                },
+                headerTintColor: '#fff',
+                headerTitleStyle: {
+                    fontWeight: 'bold',
+                },
+            }}/>
+            <StackMain.Screen name='Resultado' component={Resultado} options={{
+                headerStyle: {
+                    backgroundColor: '#009387',
+                },
+                headerTintColor: '#fff',
+                headerTitleStyle: {
+                    fontWeight: 'bold',
+                },
+            }}/>
         </StackMain.Navigator>
     )
 }

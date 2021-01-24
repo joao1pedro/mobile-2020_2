@@ -9,11 +9,12 @@ export default class Perfil extends Component {
         const img = { uri: 'https://cdn.pixabay.com/photo/2013/07/13/11/43/tux-158547_960_720.png' }
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style ={{fontSize: 20, fontWeight: "bold", padding: 10}}> Perfil </Text>
                 <Image
                     source={img}
                     style={{ width: 80, height: 80 }}
                 />
-                <Text style={{ fontSize: 16 }}>
+                <Text style={{ fontSize: 16, padding: 10}}>
                     Nome: {nome}
                     {'\n'}
                     Idade: {idade}

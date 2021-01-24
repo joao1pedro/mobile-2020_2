@@ -10,8 +10,8 @@ export default class Perfil extends Component {
 
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-
-                <Text style={{ fontSize: 16 }}>
+                <Text style={{ fontSize: 20, padding: 10, fontWeight: "bold" }}> Resultado</Text>
+                <Text style={{ fontSize: 16, padding: 10 }}>
                     IMC: {imc}
                     {'\n'}
                     <IMCMsg

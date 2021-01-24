@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, TextInput, Button, StyleSheet } from 'react-native'
+import { View, TextInput, Button, StyleSheet, Text } from 'react-native'
 
 export default class Cadastro extends Component {
     constructor(props) {
@@ -9,7 +9,10 @@ export default class Cadastro extends Component {
 
     render() {
         return (
-            <View >
+            <View View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{fontSize: 20, padding: 10, fontWeight: "bold"}}>
+                    Cadastro
+                </Text>
                 <TextInput
                     style={{ height: 40 }}
                     placeholder='Digite o nome'

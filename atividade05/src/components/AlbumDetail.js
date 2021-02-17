@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Text, Button } from 'react-native'
+import { Text, Image, View } from 'react-native'
 
 import Card from './cards/Card'
 import CardItem from './cards/CardItem'
+import MyButton from './MyButton'
 
 class AlbumDetail extends Component {
     constructor(props) {
@@ -12,16 +13,26 @@ class AlbumDetail extends Component {
         return (
             <Card>
                 <CardItem>
-                    <Text> FOTO </Text>
-                    <Text> {this.props.album.name} </Text>
-                    <Text>  {this.props.album.artist} </Text>
-                </CardItem>    
+                    <View style={{ marginLeft: 10, marginRight: 10 }}>
+                        <Image style={{ width: 50, height: 50 }}
+                            source={{ uri: 'https://raw.githubusercontent.com/san650/ten/master/apps/music/images/ramones-ramones.jpg' }} />
+                    </View>
+                    <View style={{ justifyContent: 'space-around' }}>
+                        <Text style={{ fontSize: 16, fontWeight: 'bold' }}>{this.props.album.name}</Text>
+                        <Text>{this.props.album.artist}</Text>
+                    </View>
+                </CardItem>
+                <CardItem style={{ justifyContent: 'center' }}>
+                    <Image style={{ width: 300, height: 300 }}
+                        source={{ uri: 'https://raw.githubusercontent.com/san650/ten/master/apps/music/' + this.props.album.image }} />
+                </CardItem>
                 <CardItem>
-                    <Text> FOTO </Text>
-                </CardItem> 
-                <CardItem>
-                    <Button title='Teste'/>
-                </CardItem> 
+                    <MyButton
+                        onPress={() => alert(this.props.album.name)}
+                    >
+                        Me Compre!
+                    </MyButton>
+                </CardItem>
             </Card>
         );
     }

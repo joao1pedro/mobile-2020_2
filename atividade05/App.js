@@ -7,7 +7,7 @@ import AlbumList from './src/components/AlbumList'
 export default class App extends Component {
   render() {
     return (
-      <View>
+      <View style={{flex:1}}>
         <Header title='Project Albums' />
         <AlbumList />
       </View>

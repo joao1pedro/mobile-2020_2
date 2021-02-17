@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native'
+import { Text, Button } from 'react-native'
+
+import Card from './cards/Card'
+import CardItem from './cards/CardItem'
 
 class AlbumDetail extends Component {
     constructor(props) {
@@ -7,9 +10,19 @@ class AlbumDetail extends Component {
     }
     render() {
         return (
-            <View>
-                <Text>{this.props.album.title}</Text>
-            </View>
+            <Card>
+                <CardItem>
+                    <Text> FOTO </Text>
+                    <Text> {this.props.album.name} </Text>
+                    <Text>  {this.props.album.artist} </Text>
+                </CardItem>    
+                <CardItem>
+                    <Text> FOTO </Text>
+                </CardItem> 
+                <CardItem>
+                    <Button title='Teste'/>
+                </CardItem> 
+            </Card>
         );
     }
 }

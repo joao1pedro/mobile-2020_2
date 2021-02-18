@@ -1,19 +1,14 @@
 import React, { Component } from 'react';
-import { AppRegistry, View } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 
-import Header from './src/components/Header';
-import AlbumList from './src/components/AlbumList'
+import Routes from './src/components/Routes'
 
 export default class App extends Component {
-  render() {
-    return (
-      <View style={{flex:1}}>
-        <Header title='Project Albums' />
-        <AlbumList />
-      </View>
-
+  render(){
+    return(
+      <SafeAreaProvider>
+        <Routes />
+      </SafeAreaProvider>
     );
   }
 }
-
-AppRegistry.registerComponent('albums', () => App);

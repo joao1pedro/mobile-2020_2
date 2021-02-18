@@ -21,7 +21,7 @@ class AlbumList extends Component {
                 renderItem = {
                     ({item}) => {
                         return(
-                            <AlbumDetail album={item}/>
+                            <AlbumDetail album={item} {...this.props}/>
                         );
                     }
                 } 

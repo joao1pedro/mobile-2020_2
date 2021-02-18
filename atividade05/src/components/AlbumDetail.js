@@ -5,9 +5,9 @@ import Card from './cards/Card'
 import CardItem from './cards/CardItem'
 import MyButton from './MyButton'
 
-class AlbumDetail extends Component {
+export default class AlbumDetail extends Component {
     constructor(props) {
-        super(props);
+        super(props)
     }
     render() {
         return (
@@ -28,13 +28,23 @@ class AlbumDetail extends Component {
                 </CardItem>
                 <CardItem>
                     <MyButton
+                        onPress={
+                            () => {
+                                this.props.navigation.navigate('MyModal')
+                            }
+                        }
+                    >
+                    Ver músicas
+                    </MyButton>
+                </CardItem>
+                <CardItem>
+                    <MyButton
                         onPress={() => alert(this.props.album.name)}
                     >
-                        Me Compre!
+                    Me compre!
                     </MyButton>
                 </CardItem>
             </Card>
         );
     }
 }
-export default AlbumDetail;

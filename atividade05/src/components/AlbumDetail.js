@@ -30,7 +30,7 @@ export default class AlbumDetail extends Component {
                     <MyButton
                         onPress={
                             () => {
-                                this.props.navigation.navigate('MyModal')
+                                this.props.navigation.navigate('MyModal', {name:this.props.album.name, tracks:this.props.album.links.tracks})
                             }
                         }
                     >

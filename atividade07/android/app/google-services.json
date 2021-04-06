@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "191571114091",
+    "project_id": "fir-crud-e8623",
+    "storage_bucket": "fir-crud-e8623.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191571114091:android:b273bdef8d9dffbca8192e",
+        "android_client_info": {
+          "package_name": "com.atividade07"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "191571114091-hbg8limoog1uv4i7is007e493mqelmhr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCta8pOHDt5vsZ0OvSLaLgUZpxudROHaUw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "191571114091-hbg8limoog1uv4i7is007e493mqelmhr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

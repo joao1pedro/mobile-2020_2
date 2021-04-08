@@ -18,16 +18,25 @@ export default class ListUserScrenn extends Component {
         this.listUsers()
     }
 
+    deleteUser = () => {
+        firestore()
+          .collection('users')
+          .doc('pNVtTdViPJPkyQRPjLFt')
+          .delete()
+          .then(() => {
+            console.log('User deleted!');
+          });
+          this.listUsers()
+      }
+
     listUsers() {
         firestore()
             .collection('users')
             .get()
             .then(querySnapshot => {
-                //console.log('Total users: ', querySnapshot.size);
                 let users = []
                 querySnapshot.forEach(
                     documentSnapshot => {
-                        //console.log('User ID: ', documentSnapshot.id, documentSnapshot.data());
                         users.push(documentSnapshot.data())
                     }
                 );
@@ -59,7 +68,7 @@ export default class ListUserScrenn extends Component {
                                     />
                                 </View>
                                 <View style={{ flex: 1 }}>
-                                    <MyButton title='Delete' />
+                                    <MyButton title='Delete' onPress={this.deleteUser}/>
                                 </View>
                             </View>
                         )
